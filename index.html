@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapa de Riesgos | Focus Fitness Center</title>
+  <meta name="description"
+    content="Mapa interactivo de riesgos laborales en Focus Fitness Center. Identifica y conoce los riesgos de seguridad, biomecanicos, quimicos y mas.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="#inicio" class="nav-logo">
+      <img src="logo_sin_fondo.png" alt="Focus Fitness Center logo">
+      <div class="nav-brand">
+        <span class="nb1">Focus</span>
+        <span class="nb2">Fitness Center</span>
+      </div>
+    </a>
+    <nav-links style="display:flex;align-items:center;gap:20px;">
+      <a href="#riesgos"
+        style="color:var(--white-50);font-size:.8rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;transition:var(--tr);"
+        onmouseover="this.style.color='var(--white)'" onmouseout="this.style.color='var(--white-50)'">Riesgos</a>
+      <a href="#ambiental"
+        style="color:var(--white-50);font-size:.8rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;transition:var(--tr);"
+        onmouseover="this.style.color='var(--white)'" onmouseout="this.style.color='var(--white-50)'">Ambiental</a>
+      <div class="nav-pill">Mapa de Riesgos</div>
+    </nav-links>
+  </nav>
+
+  <div class="page">
+    <div class="divider"></div>
+
+    <!-- RIESGOS SECTION -->
+    <section id="riesgos">
+      <div class="section-inner">
+        <div class="sec-label reveal"><span>Clasificacion de riesgos</span></div>
+        <h2 class="sec-title reveal">Riesgos <em>Identificados</em></h2>
+
+        <!-- PHOTO COLLAGE -->
+        <div class="collage reveal">
+          <div class="photo-card">
+            <img src="imagen-1.jpg" alt="Area de cardio y entrenamiento grupal">
+            <div class="mwrap m6"><button class="marker" data-risk="6" id="marker-6">6</button>
+              <div class="m-tip">Riesgo Fisico - Ruido</div>
+            </div>
+            <div class="photo-cap"><span class="photo-cap-text">Area de cardio y entrenamiento grupal</span></div>
+          </div>
+          <div class="photo-card">
+            <img src="imagen-2.jpg" alt="Instalacion electrica expuesta">
+            <div class="mwrap m1"><button class="marker" data-risk="1" id="marker-1">1</button>
+              <div class="m-tip">Riesgo Electrico</div>
+            </div>
+            <div class="mwrap m7"><button class="marker" data-risk="7" id="marker-7">7</button>
+              <div class="m-tip">Fenomenos Naturales</div>
+            </div>
+            <div class="photo-cap"><span class="photo-cap-text">Instalacion electrica y estructura</span></div>
+          </div>
+          <div class="photo-card">
+            <img src="imagen-3.jpg" alt="Sala principal de maquinas y pesas">
+            <div class="mwrap m4"><button class="marker" data-risk="4" id="marker-4">4</button>
+              <div class="m-tip">Riesgo Quimico</div>
+            </div>
+            <div class="photo-cap"><span class="photo-cap-text">Zona de maquinas, pesas y circulacion</span></div>
+          </div>
+          <div class="photo-card">
+            <img src="imagen-4.jpg" alt="Personas entrenando con maquinas">
+            <div class="mwrap m3"><button class="marker" data-risk="3" id="marker-3">3</button>
+              <div class="m-tip">Riesgo Psicosocial</div>
+            </div>
+            <div class="mwrap m2"><button class="marker" data-risk="2" id="marker-2">2</button>
+              <div class="m-tip">Riesgo Biomecanico</div>
+            </div>
+            <div class="mwrap m5"><button class="marker" data-risk="5" id="marker-5">5</button>
+              <div class="m-tip">Riesgo Biologico</div>
+            </div>
+            <div class="photo-cap"><span class="photo-cap-text">Manipulacion de cargas y uso de bancos</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ASPECTOS AMBIENTALES -->
+    <section id="ambiental" class="amb-section">
+      <div class="section-inner">
+
+        <div class="sec-label reveal"><span>Analisis Ambiental</span></div>
+        <h2 class="sec-title reveal">Aspectos e Impactos <em>Ambientales</em></h2>
+
+        <!-- CARDS GRID -->
+        <div class="amb-grid">
+
+          <!-- NEG 1 -->
+          <div class="amb-card reveal" data-type="neg" id="amb-card-1">
+            <div class="amb-card-top">
+              <div class="amb-card-meta">
+                <div class="amb-aspect">Utilizacion de iluminacion y ventilacion de forma ininterrumpida durante toda la
+                  jornada operativa</div>
+              </div>
+            </div>
+            <div class="amb-divider"></div>
+            <div class="amb-card-bottom">
+              <div class="amb-impact-label">&#x2192; Impacto Ambiental</div>
+              <p class="amb-impact"><strong>Contaminacion atmosferica</strong> por emision innecesaria de CO&#8322; al
+                mantener luces y ventiladores encendidos en areas sin usuarios.</p>
+            </div>
+          </div>
+
+          <!-- NEG 2 -->
+          <div class="amb-card reveal" data-type="neg" id="amb-card-2">
+            <div class="amb-card-top">
+              <div class="amb-card-meta">
+                <div class="amb-aspect">Generacion de residuos solidos de empaques y suplementos alimenticios</div>
+              </div>
+            </div>
+            <div class="amb-divider"></div>
+            <div class="amb-card-bottom">
+              <div class="amb-impact-label">&#x2192; Impacto Ambiental</div>
+              <p class="amb-impact"><strong>Contaminacion del suelo</strong> por acumulacion de envases plasticos y
+                empaques no biodegradables provenientes de la tienda de suplementos y alimentos del gimnasio.</p>
+            </div>
+          </div>
+
+          <!-- NEG 3 -->
+          <div class="amb-card reveal" data-type="neg" id="amb-card-3">
+            <div class="amb-card-top">
+              <div class="amb-card-meta">
+                <div class="amb-aspect">Emision de ruido continuo hacia el entorno urbano circundante</div>
+              </div>
+            </div>
+            <div class="amb-divider"></div>
+            <div class="amb-card-bottom">
+              <div class="amb-impact-label">&#x2192; Impacto Ambiental</div>
+              <p class="amb-impact"><strong>Alteracion de la calidad sonora ambiental</strong> en el vecindario aledaño,
+                afectando el descanso y la salud auditiva de la comunidad residente.</p>
+            </div>
+          </div>
+
+          <!-- POS 1 -->
+          <div class="amb-card reveal" data-type="pos" id="amb-card-4">
+            <div class="amb-card-top">
+              <div class="amb-card-meta">
+                <div class="amb-aspect">Contratacion de personal local del sector y la comunidad</div>
+              </div>
+            </div>
+            <div class="amb-divider"></div>
+            <div class="amb-card-bottom">
+              <div class="amb-impact-label">&#x2192; Impacto Ambiental</div>
+              <p class="amb-impact"><strong>Reduccion de emisiones por desplazamiento</strong> al minimizar los
+                trayectos del personal, disminuyendo la huella de carbono de la operacion.</p>
+            </div>
+          </div>
+
+          <!-- POS 2 -->
+          <div class="amb-card reveal" data-type="pos" id="amb-card-5">
+            <div class="amb-card-top">
+              <div class="amb-card-meta">
+                <div class="amb-aspect">Utilizacion de losetas de caucho reciclado fabricadas a partir de neumaticos
+                  desechados en las zonas de entrenamiento</div>
+              </div>
+            </div>
+            <div class="amb-divider"></div>
+            <div class="amb-card-bottom">
+              <div class="amb-impact-label">&#x2192; Impacto Ambiental</div>
+              <p class="amb-impact"><strong>Reduccion de residuos industriales</strong> al dar aprovechamiento a
+                neumaticos fuera de uso, evitando su disposicion en vertederos y disminuyendo la demanda de materiales
+                nuevos.</p>
+            </div>
+          </div>
+
+          <!-- POS 3 -->
+          <div class="amb-card reveal" data-type="pos" id="amb-card-6">
+            <div class="amb-card-top">
+              <div class="amb-card-meta">
+                <div class="amb-aspect">Eliminacion de contratos, folletos y rutinas impresas mediante el uso exclusivo
+                  de aplicacion movil y redes sociales</div>
+              </div>
+            </div>
+            <div class="amb-divider"></div>
+            <div class="amb-card-bottom">
+              <div class="amb-impact-label">&#x2192; Impacto Ambiental</div>
+              <p class="amb-impact"><strong>Reduccion del consumo de papel</strong> y de residuos asociados a la
+                impresion, disminuyendo la tala de recursos forestales y la generacion de desechos en la operacion.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="foot-logo">
+      <img src="logo_sin_fondo.png" alt="Focus Fitness Center">
+      <div class="foot-brand">Focus Fitness Center</div>
+    </div>
+  </footer>
+
+  <!-- MODAL -->
+  <div class="modal-ov" id="modal" role="dialog" aria-modal="true">
+    <div class="modal-box">
+      <button class="modal-close" id="modal-close" aria-label="Cerrar">&times;</button>
+      <div class="modal-hdr">
+        <div class="modal-num" id="modal-num"></div>
+        <div class="modal-meta">
+          <div class="modal-type" id="modal-type"></div>
+          <div class="modal-title-el" id="modal-title"></div>
+        </div>
+      </div>
+      <div class="modal-div"></div>
+      <p class="modal-text-el" id="modal-text"></p>
+      <div class="modal-foot">
+        <span class="rbadge" id="modal-badge"></span>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
